@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RM Aesthetic | Clínica de Estética Avançada</title>
+<meta name="description" content="RM Aesthetic — clínica de estética avançada especializada em tecnologias premium, resultados naturais e atendimento humanizado. Excelência que realça sua essência.">
+<meta name="keywords" content="clínica de estética, estética avançada, botox, criolipólise, bioestimuladores, preenchimento facial, radiofrequência, RM Aesthetic">
+<meta name="author" content="RM Aesthetic">
+ 
+<!-- Open Graph -->
+<meta property="og:title" content="RM Aesthetic | Excelência que Realça sua Essência">
+<meta property="og:description" content="Clínica de estética avançada. Tecnologia, saúde e sofisticação em cada procedimento.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:locale" content="pt_BR">
+ 
+<link rel="icon" type="image/png" href="assets/logo.png">
+ 
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+ 
+<link rel="stylesheet" href="style.css">
+ 
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "RM Aesthetic",
+  "description": "Clínica de estética avançada especializada em tecnologias premium, saúde e beleza.",
+  "image": "assets/logo.png",
+  "medicalSpecialty": "Estética",
+  "priceRange": "$$$",
+  "slogan": "Excelência que realça sua essência"
+}
+</script>
+</head>
+<body>
+ 
+<!-- ================= HEADER ================= -->
+<header id="header" class="header">
+  <div class="header__inner">
+    <a href="#home" class="header__logo" aria-label="RM Aesthetic — voltar para o início">
+      <img src="/img.logo/img.2logo.png" alt="RM Aesthetic">
+    </a>
+ 
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#metodos" class="nav__link">Métodos</a></li>
+        <li><a href="#resultados" class="nav__link">Resultados</a></li>
+        <li><a href="#quem-somos" class="nav__link">Quem Somos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+ 
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+ 
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu__list">
+    <li><a href="#home" class="mobile-menu__link">Home</a></li>
+    <li><a href="#metodos" class="mobile-menu__link">Métodos</a></li>
+    <li><a href="#resultados" class="mobile-menu__link">Resultados</a></li>
+    <li><a href="#quem-somos" class="mobile-menu__link">Quem Somos</a></li>
+    <li><a href="#contato" class="mobile-menu__link">Contato</a></li>
+  </ul>
+</div>
+ 
+<main>
+ 
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero__slider" id="heroSlider"></div>
+  <div class="hero__overlay"></div>
+ 
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal" data-anim="fade">Clínica RM Aesthetic</p>
+    <h1 class="hero__title reveal" data-anim="zoom">RM Aesthetic</h1>
+    <p class="hero__subtitle reveal" data-anim="fade">Estética Avançada • Saúde • Beleza • Bem-estar</p>
+    <div class="hero__actions reveal" data-anim="slide">
+      <a href="#contato" class="btn btn--gold">Agende sua Avaliação</a>
+      <a href="#metodos" class="btn btn--outline">Conheça nossos Métodos</a>
+    </div>
+  </div>
+ 
+  <div class="hero__dots" id="heroDots"></div>
+ 
+  <div class="hero__scrollcue">
+    <span></span>
+  </div>
+</section>
+ 
+<!-- ================= MÉTODOS ================= -->
+<section class="section metodos" id="metodos">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">Tecnologia a serviço da beleza</p>
+    <h2 class="section__title reveal" data-anim="fade">Tecnologias e Procedimentos</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+ 
+    <div class="cards-grid" id="metodosGrid"></div>
+  </div>
+</section>
+ 
+<!-- ================= RESULTADOS ================= -->
+<section class="section resultados" id="resultados">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">Transformações reais, cuidado genuíno</p>
+    <h2 class="section__title reveal" data-anim="fade">Resultados Reais</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+  </div>
+ 
+  <div class="carousel" id="resultadosCarousel">
+    <div class="carousel__track" id="resultadosTrack"></div>
+    <button class="carousel__arrow carousel__arrow--prev" id="resPrev" aria-label="Anterior">&#10094;</button>
+    <button class="carousel__arrow carousel__arrow--next" id="resNext" aria-label="Próximo">&#10095;</button>
+  </div>
+</section>
+ 
+<!-- ================= QUEM SOMOS ================= -->
+<section class="section quem-somos" id="quem-somos">
+  <div class="container quem-somos__grid">
+    <div class="quem-somos__media reveal" data-anim="slide-right">
+      <div class="quem-somos__image">
+        <img src="/img.logo/img.2logo.png" alt="Equipe RM Aesthetic" loading="lazy">
+      </div>
+      <div class="quem-somos__frame"></div>
+    </div>
+ 
+    <div class="quem-somos__text reveal" data-anim="slide-left">
+      <p class="section__eyebrow">Nossa essência</p>
+      <h2 class="section__title section__title--left">Sobre a RM Aesthetic</h2>
+      <div class="gold-divider gold-divider--left"></div>
+      <p>Na RM Aesthetic, cada protocolo nasce do encontro entre ciência e sensibilidade. Reunimos equipamentos de última geração, uma equipe médica especializada e um ambiente pensado para acolher — porque acreditamos que a verdadeira estética começa no cuidado humano.</p>
+      <p>Mais do que procedimentos, entregamos confiança: segurança clínica em cada etapa, tecnologia de ponta e resultados que respeitam a naturalidade de cada paciente.</p>
+ 
+      <div class="counters">
+        <div class="counter">
+          <span class="counter__number" data-target="5000" data-suffix="+">0</span>
+          <span class="counter__label">Pacientes atendidos</span>
+        </div>
+        <div class="counter">
+          <span class="counter__number" data-target="12" data-suffix="+">0</span>
+          <span class="counter__label">Anos de experiência</span>
+        </div>
+        <div class="counter">
+          <span class="counter__number" data-target="98" data-suffix="%">0</span>
+          <span class="counter__label">Satisfação</span>
+        </div>
+        <div class="counter">
+          <span class="counter__number" data-target="30" data-suffix="+">0</span>
+          <span class="counter__label">Procedimentos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="section diferenciais">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">O que nos distingue</p>
+    <h2 class="section__title reveal" data-anim="fade">Diferenciais RM Aesthetic</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+ 
+    <div class="dif-grid" id="diferenciaisGrid"></div>
+  </div>
+</section>
+ 
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="section depoimentos">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">Vozes de quem confia</p>
+    <h2 class="section__title reveal" data-anim="fade">Depoimentos</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+  </div>
+ 
+  <div class="carousel carousel--depoimentos" id="depoimentosCarousel">
+    <div class="carousel__track" id="depoimentosTrack"></div>
+    <button class="carousel__arrow carousel__arrow--prev" id="depPrev" aria-label="Anterior">&#10094;</button>
+    <button class="carousel__arrow carousel__arrow--next" id="depNext" aria-label="Próximo">&#10095;</button>
+  </div>
+</section>
+ 
+<!-- ================= GALERIA ================= -->
+<section class="section galeria" id="galeria">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">Um olhar sobre nosso espaço</p>
+    <h2 class="section__title reveal" data-anim="fade">Galeria</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+    <div class="masonry" id="masonryGrid"></div>
+  </div>
+</section>
+
+<!-- ================= PERGUNTAS FREQUENTES ================= -->
+<section class="section faq" id="faq">
+  <div class="container">
+
+    <p class="section__eyebrow reveal" data-anim="fade">
+      Tire suas dúvidas
+    </p>
+
+    <h2 class="section__title reveal" data-anim="fade">
+      Perguntas Frequentes
+    </h2>
+
+    <div class="gold-divider reveal" data-anim="fade"></div>
+
+    <div class="faq__list">
+
+      <!-- Pergunta 1 -->
+      <div class="faq__item">
+        <button
+          class="faq__question"
+          type="button"
+          aria-expanded="false"
+        >
+          <span>O que é RM Aesthetic?</span>
+          <span class="faq__icon" aria-hidden="true">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            A RM Aesthetic é uma clínica especializada em estética avançada,
+            saúde, beleza e bem-estar, que combina tecnologia, protocolos
+            personalizados e atendimento humanizado para oferecer uma
+            experiência segura e individualizada.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="faq__item">
+        <button
+          class="faq__question"
+          type="button"
+          aria-expanded="false"
+        >
+          <span>Quais são os procedimentos da RM Aesthetic?</span>
+          <span class="faq__icon" aria-hidden="true">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            A RM Aesthetic oferece diversos procedimentos e tecnologias
+            estéticas, incluindo Botox, criolipólise, corrente russa,
+            radiofrequência, bioestimuladores, preenchimento facial,
+            lipo enzimática, limpeza de pele, drenagem linfática,
+            ultrassom estético, carboxiterapia, microagulhamento,
+            laser e skinbooster.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pergunta 3 -->
+      <div class="faq__item">
+        <button
+          class="faq__question"
+          type="button"
+          aria-expanded="false"
+        >
+          <span>RM Aesthetic é confiável?</span>
+          <span class="faq__icon" aria-hidden="true">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            A RM Aesthetic tem como princípios o cuidado, a segurança,
+            a tecnologia e o atendimento humanizado. Cada procedimento
+            deve ser realizado de acordo com a avaliação e as necessidades
+            individuais de cada paciente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pergunta 4 -->
+      <div class="faq__item">
+        <button
+          class="faq__question"
+          type="button"
+          aria-expanded="false"
+        >
+          <span>Como agendar uma consulta com a Clínica?</span>
+          <span class="faq__icon" aria-hidden="true">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            Você pode agendar sua avaliação entrando em contato com a
+            RM Aesthetic pelo WhatsApp ou preenchendo o formulário de
+            contato disponível no site. Nossa equipe poderá orientar
+            você sobre o procedimento e os próximos passos.
+          </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+<!-- ================= CONTATO ================= -->
+<section class="section contato" id="contato">
+  <div class="container">
+    <p class="section__eyebrow reveal" data-anim="fade">Estamos aqui por você</p>
+    <h2 class="section__title reveal" data-anim="fade">Agende sua Avaliação</h2>
+    <div class="gold-divider reveal" data-anim="fade"></div>
+  </div>
+ 
+  <div class="contato__grid container">
+    <div class="contato__map reveal" data-anim="slide-right">
+      <iframe
+        title="Localização RM Aesthetic"
+        src="https://www.google.com/maps?q=Av.+Paulista,+São+Paulo&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+ 
+    <form class="contato__form reveal" data-anim="slide-left" id="contatoForm" novalidate>
+      <div class="form__row">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+      </div>
+      <div class="form__row form__row--split">
+        <div>
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+      </div>
+      <div class="form__row">
+        <label for="procedimento">Procedimento de interesse</label>
+        <select id="procedimento" name="procedimento" required>
+          <option value="" disabled selected>Selecione um procedimento</option>
+          <option>Botox</option>
+          <option>Criolipólise</option>
+          <option>Corrente Russa</option>
+          <option>Radiofrequência</option>
+          <option>Bioestimuladores</option>
+          <option>Preenchimento Facial</option>
+          <option>Lipo Enzimática</option>
+          <option>Limpeza de Pele</option>
+          <option>Drenagem Linfática</option>
+          <option>Ultrassom Estético</option>
+          <option>Carboxiterapia</option>
+          <option>Microagulhamento</option>
+          <option>Laser</option>
+          <option>Skinbooster</option>
+          <option>Outro / Avaliação geral</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o que procura..."></textarea>
+      </div>
+      <button type="submit" class="btn btn--gold btn--block">Enviar</button>
+      <p class="form__feedback" id="formFeedback" role="status"></p>
+    </form>
+  </div>
+</section>
+ 
+</main>
+ 
+<!-- ================= RODAPÉ ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="header__logo" aria-label="RM Aesthetic — voltar para o início">
+      <img src="/img.logo/img.2logo.png" alt="RM Aesthetic">
+    </a>
+      <p>Excelência que realça sua essência.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" class="footer__social">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="footer__social">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer__col">
+      <h3>Contato</h3>
+      <p>Av. Paulista, 1000 — São Paulo, SP</p>
+      <p>+55 (93) 98407-5238</p>
+      <p>contato@rmaesthetic.com.br</p>
+    </div>
+ 
+    <div class="footer__col">
+      <h3>Links Rápidos</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#metodos">Métodos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> RM Aesthetic. Todos os direitos reservados.</p>
+  </div>
+</footer>
+ 
+<!-- ================= FLUTUANTES ================= -->
+<!-- WhatsApp Button - Direita -->
+<a href="https://wa.me/5593984075238?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.171l-.346.181-3.582.939 1.02-3.719.235-.374a9.86 9.86 0 1413.201 5.256l-.384-.645-3.275-.508z"/>
+  </svg>
+</a>
+ 
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
+  <div class="lightbox__content" id="lightboxContent"></div>
+  <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Próximo">&#10095;</button>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
