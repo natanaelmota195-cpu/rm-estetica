@@ -3,7 +3,7 @@
    Organizado por seção / funcionalidade.
    Nenhuma dependência externa (JavaScript puro).
    ========================================================= */
- 
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initMobileMenu();
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
- 
+
 /* ---------------------------------------------------------
    ÍCONES — pequeno sistema de ícones SVG inline (minimalistas)
 --------------------------------------------------------- */
@@ -32,7 +32,7 @@ const ICONS = {
   snow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M4.9 5l14.2 14M19.1 5 4.9 19M2 12h20"/></svg>',
   bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>',
   circleDot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/></svg>',
-  facial: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 4c4 0 7 3 7 7v3c0 3-2 5-3 5s-1-1-2-1-1 1-2 1c-2 0-4-2-4-5"/><path d="M8 10c0-1 .5-1.5 1-1.5M15 10c0-1-.5-1.5-1-1.5"/></svg>',
+  facial: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 4c4 0 7 3 7 7v3c0 3-2 5-3 5s-1-1-2-1-1 1-2 1c-2 0-4-2-4-5"/><path d="M8 10c0-1 .5-1.5 1-1.5M15 10c0-1 .5-1.5 1-1.5"/></svg>',
   syringe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 3l3 3M4 20l4-4M9 15l7-7 2 2-7 7-3 1zM13 5l3 3"/></svg>',
   waves2: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="6" opacity=".6"/><circle cx="12" cy="12" r="10" opacity=".3"/></svg>',
   microneedle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 14l10-10 6 6-10 10H4v-6z"/><path d="M14 4l6 6"/></svg>',
@@ -40,38 +40,38 @@ const ICONS = {
   bubble: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="14" r="6"/><circle cx="17" cy="7" r="2.6"/></svg>',
   shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6l7-3z"/></svg>',
   gem: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3h12l3 5-9 13L3 8l3-5z"/><path d="M3 8h18M9 3l3 5 3-5M9 8l3 13 3-13"/></svg>',
-  team: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.6 1.9-4.7 4-5"/></svg>',
+  team: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.8 1.8-5 4-5s4 2.2 4 5"/></svg>',
   heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/></svg>',
 };
- 
+
 /* ---------------------------------------------------------
    DADOS — Métodos / Procedimentos
 --------------------------------------------------------- */
 const METODOS = [
-  { icon: 'syringe', image: 'imagens/img.botox.jpg', title: 'Botox', desc: 'Suavização de linhas de expressão com toxina botulínica de alta precisão, preservando a naturalidade dos movimentos.' },
-  { icon: 'snow', image: 'imagens/img.criopolise.jpg', title: 'Criolipólise', desc: 'Redução de gordura localizada através do congelamento controlado das células adiposas, sem cirurgia.' },
-  { icon: 'bolt', image: 'imagens/img.corrente.russa.jpg', title: 'Corrente Russa', desc: 'Estimulação elétrica muscular que tonifica e firma o corpo, aumentando a força e a definição.' },
-  { icon: 'waves2', image: 'imagens/img.header3.png', title: 'Radiofrequência', desc: 'Estímulo térmico profundo que ativa colágeno e elastina, promovendo firmeza e viço à pele.' },
-  { icon: 'spark', image: 'imagens/img.header.jpg', title: 'Bioestimuladores', desc: 'Substâncias injetáveis que reativam a produção natural de colágeno para um rejuvenescimento gradual.' },
-  { icon: 'drop', image: 'imagens/img.header2.jpg', title: 'Preenchimento Facial', desc: 'Ácido hialurônico aplicado com técnica refinada para restaurar volume e harmonizar os contornos.' },
-  { icon: 'circleDot', image: 'imagens/img.header3.png', title: 'Lipo Enzimática', desc: 'Enzimas que atuam na quebra de gordura localizada, remodelando a silhueta de forma gradual.' },
-  { icon: 'facial', image: 'imagens/img.limpeza.pele.jpg', title: 'Limpeza de Pele', desc: 'Higienização profunda que remove impurezas e revitaliza a textura, devolvendo luminosidade à pele.' },
-  { icon: 'waves2', image: 'imagens/img.header2.jpg', title: 'Drenagem Linfática', desc: 'Massagem terapêutica que estimula a circulação e reduz retenção de líquidos, aliviando o corpo.' },
-  { icon: 'circleDot', image: 'imagens/img.header.jpg', title: 'Ultrassom Estético', desc: 'Ondas ultrassônicas que atuam em camadas profundas, remodelando e firmando os tecidos.' },
-  { icon: 'bubble', image: 'imagens/img.header2.jpg', title: 'Carboxiterapia', desc: 'Aplicação de gás carbônico medicinal que melhora oxigenação, circulação e firmeza da pele.' },
-  { icon: 'microneedle', image: 'imagens/img.microagulhamento.jpg', title: 'Microagulhamento', desc: 'Microlesões controladas que estimulam a regeneração celular e o colágeno, refinando a textura da pele.' },
-  { icon: 'laser', image: 'imagens/img.header3.png', title: 'Laser', desc: 'Tecnologia de precisão para tratamento de manchas, cicatrizes e rejuvenescimento da pele.' },
-  { icon: 'gem', image: 'imagens/img.header2.jpg', title: 'Skinbooster', desc: 'Microinjeções de ácido hialurônico que hidratam profundamente, devolvendo viço e elasticidade.' },
+  { icon: 'syringe', image: 'img.botox.jpg', title: 'Botox', desc: 'Suavização de linhas de expressão com toxina botulínica de alta precisão, preservando a naturalidade dos movimentos.' },
+  { icon: 'snow', image: 'img.criopolise.jpg', title: 'Criolipólise', desc: 'Redução de gordura localizada através do congelamento controlado das células adiposas, sem cirurgia.' },
+  { icon: 'bolt', image: 'img.corrente.russa.jpg', title: 'Corrente Russa', desc: 'Estimulação elétrica muscular que tonifica e firma o corpo, aumentando a força e a definição.' },
+  { icon: 'waves2', image: 'img.header3.png', title: 'Radiofrequência', desc: 'Estímulo térmico profundo que ativa colágeno e elastina, promovendo firmeza e viço à pele.' },
+  { icon: 'spark', image: 'img.header.jpg', title: 'Bioestimuladores', desc: 'Substâncias injetáveis que reativam a produção natural de colágeno para um rejuvenescimento gradual.' },
+  { icon: 'drop', image: 'img.header2.jpg', title: 'Preenchimento Facial', desc: 'Ácido hialurônico aplicado com técnica refinada para restaurar volume e harmonizar os contornos.' },
+  { icon: 'circleDot', image: 'img.header3.png', title: 'Lipo Enzimática', desc: 'Enzimas que atuam na quebra de gordura localizada, remodelando a silhueta de forma gradual.' },
+  { icon: 'facial', image: 'img.limpeza.pele.jpg', title: 'Limpeza de Pele', desc: 'Higienização profunda que remove impurezas e revitaliza a textura, devolvendo luminosidade à pele.' },
+  { icon: 'waves2', image: 'img.header2.jpg', title: 'Drenagem Linfática', desc: 'Massagem terapêutica que estimula a circulação e reduz retenção de líquidos, aliviando o corpo.' },
+  { icon: 'circleDot', image: 'img.header.jpg', title: 'Ultrassom Estético', desc: 'Ondas ultrassônicas que atuam em camadas profundas, remodelando e firmando os tecidos.' },
+  { icon: 'bubble', image: 'img.header2.jpg', title: 'Carboxiterapia', desc: 'Aplicação de gás carbônico medicinal que melhora oxigenação, circulação e firmeza da pele.' },
+  { icon: 'microneedle', image: 'img.microagulhamento.jpg', title: 'Microagulhamento', desc: 'Microlesões controladas que estimulam a regeneração celular e o colágeno, refinando a textura.' },
+  { icon: 'laser', image: 'img.header3.png', title: 'Laser', desc: 'Tecnologia de precisão para tratamento de manchas, cicatrizes e rejuvenescimento da pele.' },
+  { icon: 'gem', image: 'img.header2.jpg', title: 'Skinbooster', desc: 'Microinjeções de ácido hialurônico que hidratam profundamente, devolvendo viço e elasticidade.' },
 ];
- 
+
 const RESULTADOS = [
-  { image: 'img/img.harm..webp', title: 'Harmonização Facial', desc: 'Contornos suavizados e simetria natural, respeitando as características únicas de cada rosto.' },
-  { image: 'img/img.red.medidas.webp', title: 'Redução de Medidas', desc: 'Protocolo combinado de criolipólise e drenagem, com resultados visíveis a partir da 3ª sessão.' },
-  { image: 'img/img.rejuv..jpeg', title: 'Rejuvenescimento', desc: 'Bioestimuladores e skinbooster trabalhando juntos para uma pele mais firme e luminosa.' },
-  { image: 'img/img.pr.jpg', title: 'Pele Renovada', desc: 'Microagulhamento associado a laser para textura uniforme e poros refinados.' },
-  { image: 'img/img.c.d.webp', title: 'Corpo Definido', desc: 'Corrente russa e radiofrequência corporal para tonificação e firmeza.' },
+  { image: 'img.harm..webp', title: 'Harmonização Facial', desc: 'Contornos suavizados e simetria natural, respeitando as características únicas de cada rosto.' },
+  { image: 'img.red.medidas.webp', title: 'Redução de Medidas', desc: 'Protocolo combinado de criolipólise e drenagem, com resultados visíveis a partir da 3ª sessão.' },
+  { image: 'img.rejuv..jpeg', title: 'Rejuvenescimento', desc: 'Bioestimuladores e skinbooster trabalhando juntos para uma pele mais firme e luminosa.' },
+  { image: 'img.pr.jpg', title: 'Pele Renovada', desc: 'Microagulhamento associado a laser para textura uniforme e poros refinados.' },
+  { image: 'img.c.d.webp', title: 'Corpo Definido', desc: 'Corrente russa e radiofrequência corporal para tonificação e firmeza.' },
 ];
- 
+
 const TESTIMONIALS = [
   { name: 'Camila R.', role: 'Paciente há 3 anos', text: 'Me senti acolhida do início ao fim. Os resultados são naturais e a equipe é extremamente cuidadosa.' },
   { name: 'Fernanda A.', role: 'Paciente', text: 'A RM Aesthetic elevou o padrão do que eu esperava de uma clínica. Ambiente impecável, atendimento humano.' },
@@ -79,18 +79,18 @@ const TESTIMONIALS = [
   { name: 'Patrícia L.', role: 'Paciente', text: 'Nunca me senti insegura em nenhum procedimento. Profissionalismo do início ao fim.' },
   { name: 'Renata S.', role: 'Paciente', text: 'Resultados visíveis, discretos e naturais. Exatamente o que eu procurava.' },
 ];
- 
+
 const GALERIA = [
-  { image: 'imagens/img.header.jpg', label: 'Recepção', h: 260 },
-  { image: 'imagens/img.header2.jpg', label: 'Sala de Procedimentos', h: 320 },
-  { image: 'imagens/img.header3.png', label: 'Suíte Sofisticada', h: 230 },
-  { image: 'imagens/img.unhas.jpg', label: 'Área de Espera', h: 300 },
-  { image: 'imagens/img.limpeza.pele.jpg', label: 'Consultório', h: 260 },
-  { image: 'imagens/img.microagulhamento.jpg', label: 'Espaço Wellness', h: 340 },
-  { image: 'imagens/img.botox.jpg', label: 'Detalhes', h: 240 },
-  { image: 'imagens/img.criopolise.jpg', label: 'Ambiente Externo', h: 280 },
+  { image: 'img.header.jpg', label: 'Recepção', h: 260 },
+  { image: 'img.header2.jpg', label: 'Sala de Procedimentos', h: 320 },
+  { image: 'img.header3.png', label: 'Suíte Sofisticada', h: 230 },
+  { image: 'img.unhas.jpg', label: 'Área de Espera', h: 300 },
+  { image: 'img.limpeza.pele.jpg', label: 'Consultório', h: 260 },
+  { image: 'img.microagulhamento.jpg', label: 'Espaço Wellness', h: 340 },
+  { image: 'img.botox.jpg', label: 'Detalhes', h: 240 },
+  { image: 'img.criopolise.jpg', label: 'Ambiente Externo', h: 280 },
 ];
- 
+
 const DIFERENCIAIS = [
   { icon: 'gem', title: 'Equipamentos modernos' },
   { icon: 'team', title: 'Equipe especializada' },
@@ -99,7 +99,7 @@ const DIFERENCIAIS = [
   { icon: 'leaf', title: 'Resultados naturais' },
   { icon: 'heart', title: 'Atendimento personalizado' },
 ];
- 
+
 /* ---------------------------------------------------------
    HEADER — sombra ao rolar e navegação ativa
 --------------------------------------------------------- */
@@ -131,14 +131,14 @@ function initHeader() {
   updateActiveLink();
 }
 
- 
+
 /* ---------------------------------------------------------
    MENU MOBILE
 --------------------------------------------------------- */
 function initMobileMenu() {
   const btn = document.getElementById('hamburger');
   const menu = document.getElementById('mobileMenu');
- 
+
   const toggle = (open) => {
     const isOpen = open ?? !menu.classList.contains('is-open');
     menu.classList.toggle('is-open', isOpen);
@@ -146,45 +146,45 @@ function initMobileMenu() {
     btn.setAttribute('aria-expanded', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
   };
- 
+
   btn.addEventListener('click', () => toggle());
   menu.querySelectorAll('.mobile-menu__link').forEach(link => {
     link.addEventListener('click', () => toggle(false));
   });
 }
- 
+
 /* ---------------------------------------------------------
    HERO SLIDER — troca automática a cada 3 minutos, com fade
 --------------------------------------------------------- */
 function initHeroSlider() {
   const slidesData = [
-    'imagens/img.header.jpg',
-    'imagens/img.header2.jpg',
-    'imagens/img.microagulhamento.jpg',
-    'imagens/img.botox.jpg'
+    'img.header.jpg',
+    'img.header2.jpg',
+    'img.microagulhamento.jpg',
+    'img.botox.jpg'
   ];
   const slider = document.getElementById('heroSlider');
   const dotsWrap = document.getElementById('heroDots');
- 
+
   slidesData.forEach((src, i) => {
     const el = document.createElement('div');
     el.className = 'hero__slide';
     el.style.backgroundImage = `url('${src}')`;
     if (i === 0) el.classList.add('is-active');
     slider.appendChild(el);
- 
+
     const dot = document.createElement('button');
     dot.className = 'hero__dot' + (i === 0 ? ' is-active' : '');
     dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
     dot.addEventListener('click', () => goTo(i));
     dotsWrap.appendChild(dot);
   });
- 
+
   const slides = slider.querySelectorAll('.hero__slide');
   const dots = dotsWrap.querySelectorAll('.hero__dot');
   let current = 0;
   let timer;
- 
+
   function goTo(index) {
     slides[current].classList.remove('is-active');
     dots[current].classList.remove('is-active');
@@ -193,18 +193,18 @@ function initHeroSlider() {
     dots[current].classList.add('is-active');
     restart();
   }
- 
+
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
- 
+
   function restart() {
     clearInterval(timer);
     timer = setInterval(next, 3000);
   }
- 
+
   restart();
 }
- 
+
 /* ---------------------------------------------------------
    SCROLL REVEAL — Intersection Observer
 --------------------------------------------------------- */
@@ -218,10 +218,10 @@ function initReveal() {
       }
     });
   }, { threshold: 0.15 });
- 
+
   items.forEach(item => observer.observe(item));
 }
- 
+
 function revealOnScroll(selector) {
   const items = document.querySelectorAll(selector);
   const observer = new IntersectionObserver((entries) => {
@@ -234,7 +234,7 @@ function revealOnScroll(selector) {
   }, { threshold: 0.15 });
   items.forEach(item => observer.observe(item));
 }
- 
+
 /* ---------------------------------------------------------
    MÉTODOS — cards dinâmicos
 --------------------------------------------------------- */
@@ -255,7 +255,7 @@ function initMethodCards() {
   `).join('');
   revealOnScroll('#metodosGrid .method-card');
 }
- 
+
 /* ---------------------------------------------------------
    RESULTADOS — carrossel com autoplay
 --------------------------------------------------------- */
@@ -273,10 +273,10 @@ function initResultCards(){
       </div>
     </article>
   `).join('');
- 
+
   setupAutoCarousel(track, document.getElementById('resPrev'), document.getElementById('resNext'), 320 + 26);
 }
- 
+
 /* ---------------------------------------------------------
    DIFERENCIAIS — cards dinâmicos
 --------------------------------------------------------- */
@@ -290,7 +290,7 @@ function initDiferenciais() {
   `).join('');
   revealOnScroll('#diferenciaisGrid .dif-card');
 }
- 
+
 /* ---------------------------------------------------------
    DEPOIMENTOS — carrossel com autoplay
 --------------------------------------------------------- */
@@ -309,16 +309,16 @@ function initTestimonials() {
       </div>
     </article>
   `).join('');
- 
+
   setupAutoCarousel(track, document.getElementById('depPrev'), document.getElementById('depNext'), 340 + 26);
 }
- 
+
 /* ---------------------------------------------------------
    Utilitário genérico para carrosséis automáticos
 --------------------------------------------------------- */
 function setupAutoCarousel(track, prevBtn, nextBtn, step) {
   let timer;
- 
+
   function scrollNext() {
     const maxScroll = track.scrollWidth - track.clientWidth;
     if (track.scrollLeft >= maxScroll - 5) {
@@ -328,20 +328,20 @@ function setupAutoCarousel(track, prevBtn, nextBtn, step) {
     }
   }
   function scrollPrev() { track.scrollBy({ left: -step, behavior: 'smooth' }); }
- 
+
   function restart() {
     clearInterval(timer);
     timer = setInterval(scrollNext, 4500);
   }
- 
+
   nextBtn.addEventListener('click', () => { scrollNext(); restart(); });
   prevBtn.addEventListener('click', () => { scrollPrev(); restart(); });
   track.addEventListener('mouseenter', () => clearInterval(timer));
   track.addEventListener('mouseleave', restart);
- 
+
   restart();
 }
- 
+
 /* ---------------------------------------------------------
    GALERIA + LIGHTBOX
 --------------------------------------------------------- */
@@ -353,11 +353,11 @@ function initGallery() {
       <span class="masonry__caption">${g.label}</span>
     </div>
   `).join('');
- 
+
   const lightbox = document.getElementById('lightbox');
   const content = document.getElementById('lightboxContent');
   let current = 0;
- 
+
   function open(index) {
     current = index;
     render();
@@ -374,11 +374,11 @@ function initGallery() {
   }
   function next() { current = (current + 1) % GALERIA.length; render(); }
   function prev() { current = (current - 1 + GALERIA.length) % GALERIA.length; render(); }
- 
+
   grid.querySelectorAll('.masonry__item').forEach(item => {
     item.addEventListener('click', () => open(Number(item.dataset.index)));
   });
- 
+
   document.getElementById('lightboxClose').addEventListener('click', close);
   document.getElementById('lightboxNext').addEventListener('click', next);
   document.getElementById('lightboxPrev').addEventListener('click', prev);
@@ -389,10 +389,10 @@ function initGallery() {
     if (e.key === 'ArrowRight') next();
     if (e.key === 'ArrowLeft') prev();
   });
- 
+
   revealOnScroll('#masonryGrid .masonry__item');
 }
- 
+
 /* ---------------------------------------------------------
    CONTADORES ANIMADOS
 --------------------------------------------------------- */
@@ -408,13 +408,13 @@ function initCounters() {
   }, { threshold: 0.5 });
   counters.forEach(c => observer.observe(c));
 }
- 
+
 function animateCounter(el) {
   const target = Number(el.dataset.target);
   const suffix = el.dataset.suffix || '';
   const duration = 1800;
   const start = performance.now();
- 
+
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
@@ -423,14 +423,14 @@ function animateCounter(el) {
   }
   requestAnimationFrame(tick);
 }
- 
+
 /* ---------------------------------------------------------
    FORMULÁRIO DE CONTATO
 --------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contatoForm');
   const feedback = document.getElementById('formFeedback');
- 
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
@@ -443,7 +443,7 @@ function initContactForm() {
     form.reset();
   });
 }
- 
+
 /* ---------------------------------------------------------
    VOLTAR AO TOPO
 --------------------------------------------------------- */
